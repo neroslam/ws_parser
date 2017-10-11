@@ -1,0 +1,14 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}} - сеобук</title>
+    {% else %}
+    <title>Магия итить её...</title>
+    {% endif %}
+  </head>
+  <body>
+  <div>Навигация: <a href="/index">Вордстат</a>  <a href="/status">Статус задач</a> </div>
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>

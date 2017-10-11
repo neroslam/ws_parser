@@ -1,0 +1,8 @@
+[Unit]
+Description=start serv 4 wordstat parsing
+
+[Service]
+ExecStart=/usr/local/bin/python3 /home/ws_parser/serv.py
+Type=simple
+[Install]
+WantedBy=multi-user.target

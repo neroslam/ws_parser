@@ -1,0 +1,17 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Проверка вордстата</h1>
+<form action="{{ url_for('handle_data') }}" method="post">
+    {{form.hidden_tag()}}
+    <p>
+        {{form.quote}} ""<br/>
+        {{form.vskl}} "!"<br/><br/>
+    </p>
+    <p>{{form.keywords_field(rows='20',cols='80')}}</p>
+    <p>{{form.mail}} Адрес, куда направить отчет</p>
+
+    <p><input type="submit" value="ПЦ!"></p>
+</form>
+{% endblock %}

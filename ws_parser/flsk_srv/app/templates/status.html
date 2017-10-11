@@ -1,0 +1,20 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Статус запросов</h1>
+<table border="1">
+    {% for task in tasks %}
+    <tr>
+        <td>{{task.id}}</td>
+        <td>{{task.mail}}</td>
+        <td>{{task.keywords_cnt}}</td>
+        <td>{{task.quote}}</td>
+        <td>{{task.vskl}}</td>
+        <td>{{task.status}}</td>
+        <td><a href="{{task.link}}">{{task.link}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
